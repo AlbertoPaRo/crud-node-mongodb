@@ -1,3 +1,15 @@
-<h1>Hello world </h1>
-<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vero sequi, deserunt quis doloribus ipsam nostrum minima aperiam, molestias sunt velit accusantium quaerat at repellendus inventore debitis reprehenderit? 
-    Assumenda, rerum.</p>
+<form action="/task/add" method="POST">
+  <div>
+    <label for="title">Write a title</label>
+    <input type="text" name="title" placeholder="title" id="title" />
+  </div>
+  <div>
+    <label for="description"></label>
+    <textarea
+      name="description"
+      placeholder="Description"
+      id="description"
+    ></textarea>
+  </div>
+  <button>add</button>
+</form>

@@ -3,6 +3,7 @@ const exphbs = require("express-handlebars");
 const { router } = require("./routes/index.routes");
 const path = require("path");
 const app = express();
+const morgan = require("morgan");
 
 app.set("views", path.join(__dirname, "views"));
 app.engine(
@@ -14,7 +15,12 @@ app.engine(
   })
 );
 app.set("view engine", ".hbs");
-// //Routes
+
+//middleware
+app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: false }));
+
+//Routes
 app.use(router);
 
 module.exports = { app };
