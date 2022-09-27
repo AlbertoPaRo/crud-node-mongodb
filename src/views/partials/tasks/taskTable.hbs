@@ -15,9 +15,9 @@
         <td>{{title}}</td>
         <td>{{description}}</td>
         <td>
-            <button>Done</button>
-            <button>Delete</button>
-            <a href="/edit">Update</a>
+            <a href="/toggleDone">Done</a>
+            <a href="/delete/{{_id}}">Delete</a>
+            <a href="/edit/{{_id}}">Update</a>
         </td>
     </tr>
     {{/each}}
