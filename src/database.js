@@ -1,10 +1,10 @@
 const { connect } = require("mongoose");
 
+const { MONGODB_URI } = require("./config");
+
 (async () => {
   try {
-    const db = await connect(
-      "mongodb+srv://Prueba:prueba@cluster0.htv6w1q.mongodb.net/test"
-    );
+    const db = await connect(MONGODB_URI);
     console.log("DB connected to", db.connection.name);
   } catch (error) {
     console.error(error);
